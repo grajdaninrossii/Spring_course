@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div> <p> Hello, world! </p></div>
+    <a href="/first/goodbye">Say goodbye</a> or <a href="/exit">Exit</a>
+    or <a href="/first/hello?name=Mir&surname=Kuzin">Request with parametrs </a>
+
+<!--    С помощью thymeleaf вставляем текст с ключом message в тег-->
+    <p th:text="${message}"/>
+</body>
+</html>

@@ -1,0 +1,39 @@
+**Spring
+! scope задает то, как Spring будет создавать ваши бины
+
+
+
+*Реализация коллекций в bean-ах Spring
+Пример 1 (<list>)
+<bean id="hank"
+     class="com.springinaction.springidol.OneManBand">
+  <property name="instruments">
+    <list>
+      <ref bean="guitar" />
+      <ref bean="cymbal" />
+      <ref bean="harmonica" />
+    </list>
+  </property>
+</bean>
+
+Пример 2(<map>)
+<bean id="hank" class="com.springinaction.springidol.OneManBand">
+  <property name="instruments">
+    <map>
+      <entry key="GUITAR" value-ref="guitar" />
+      <entry key="CYMBAL" value-ref="cymbal" />
+      <entry key="HARMONICA" value-ref="harmonica" />
+    </map>
+  </property>
+</bean>
+
+Пример 3(<props>)
+<bean id="hank" class="com.springinaction.springidol.OneManBand">
+  <property name="instruments">
+    <props>
+      <prop key="GUITAR">STRUM STRUM STRUM</prop>
+      <prop key="CYMBAL">CRASH CRASH CRASH</prop>
+      <prop key="HARMONICA">HUM HUM HUM</prop>
+    </props>
+  </property>
+</bean>
